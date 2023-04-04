@@ -28,12 +28,7 @@ const newRatings = myrating.map(ratings => {
     
   });
   
-
-console.log(myrating)
 const dateadded = ['Mar 29, 2023', 'Mar 29, 2023', 'Mar 21, 2023', 'Mar 18, 2023', 'Mar 16, 2023', 'Mar 10, 2023', 'Feb 28, 2023', 'Feb 27, 2023', 'Feb 27, 2023', 'Feb 26, 2023', 'Feb 26, 2023', 'Feb 24, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 14, 2023']
-
-// const newArray = title.map((e, i) => `${e  } ${  author[i]}`);
-// console.log(newArray)
 
 function Book() {
     this.title = title 

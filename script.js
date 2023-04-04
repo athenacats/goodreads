@@ -1,6 +1,6 @@
-const myLibrary = [];
+// const myLibrary = [];
 
-// bookslist ['Gallows Hill', 'Daisy Darker', 'Truly Madly Guilty', "The Housemaid's Secret\n        (The Housemaid, #2)", 'The Guest List', 'Upgrade', 'Aesthetica', 'This Thing Between Us', 'Agency\n        (Jackpot, #2)', 'Version Control', 'We Had to Remove This Post', 'No One Is Talking About This', 'The Verifiers', 'Ripe', 'The Glow', 'The Circle\n        (The Circle, #1)', 'Edit', 'The Noise', 'The Big Dark Sky', 'Confessions', 'The Club', 'Camp Slaughter', 'The Last House on the Street', 'The Woman', 'The Girl Next Door', 'The Handyman', 'Several People Are Typing', 'All the Dangerous Things', 'The Family Game', 'Broadcast']
+const title = ['Gallows Hill', 'Daisy Darker', 'Truly Madly Guilty', "The Housemaid's Secret\n        (The Housemaid, #2)", 'The Guest List', 'Upgrade', 'Aesthetica', 'This Thing Between Us', 'Agency\n        (Jackpot, #2)', 'Version Control', 'We Had to Remove This Post', 'No One Is Talking About This', 'The Verifiers', 'Ripe', 'The Glow', 'The Circle\n        (The Circle, #1)', 'Edit', 'The Noise', 'The Big Dark Sky', 'Confessions', 'The Club', 'Camp Slaughter', 'The Last House on the Street', 'The Woman', 'The Girl Next Door', 'The Handyman', 'Several People Are Typing', 'All the Dangerous Things', 'The Family Game', 'Broadcast']
 
 // authorslist 'Coates, Darcy\n        *', 'Feeney, Alice\n        *', 'Moriarty, Liane\n        *', 'McFadden, Freida\n        *', 'Foley, Lucy\n        *', 'Crouch, Blake\n        *', 'Rowbottom, Allie\n        *', 'Moreno, Gus\n        *', 'Gibson, William', 'Palmer, Dexter', 'Bervoets, Hanna', 'Lockwood, Patricia\n        *', 'Pek, Jane\n        *', 'Etter, Sarah Rose\n        *', 'Gaynor, Jessie\n        *', 'Eggers, Dave', 'Chesler, Rick\n        *', 'Patterson, James\n        *', 'Koontz, Dean\n        *', 'Minato, Kanae', 'Lloyd, Ellery\n        *', 'Gomez, Sergio\n        *', 'Chamberlain, Diane\n        *', 'Ketchum, Jack', 'Ketchum, Jack', 'Little, Bentley', 'Kasulke, Calvin\n        *', 'Willingham, Stacy\n        *', 
 
@@ -21,6 +21,11 @@ function Book() {
     this.dateadded = dateadded
 }
 
+/* const bookTable = title.map(books => `${books.title}`);
+console.log(bookTable); */
+
+
+title.forEach(element => console.table(element))
 
 // const category = document.getElementById('booksBody')
 // const books = Array.from(category.querySelectorAll("field title, field author, field num_pages, field avg_rating, field rating, field date_added"))

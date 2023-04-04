@@ -18,6 +18,18 @@ const avgrating = ['4.01', '3.81', '3.59', '4.37', '3.84', '3.82', '3.50', '3.77
 
 const myrating = ['1 of 5 stars2 of 5 stars3 of 5 stars[ 4 of 5 stars ]5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars[ 4 of 5 stars ]5 of 5 stars', '1 of 5 stars2 of 5 stars[ 3 of 5 stars ]4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars[ 3 of 5 stars ]4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars[ 4 of 5 stars ]5 of 5 stars', '1 of 5 stars2 of 5 stars[ 3 of 5 stars ]4 of 5 stars5 of 5 stars', '1 of 5 stars[ 2 of 5 stars ]3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars[ 4 of 5 stars ]5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars[ 2 of 5 stars ]3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars[ 2 of 5 stars ]3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars[ 2 of 5 stars ]3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars[ 2 of 5 stars ]3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars[ 3 of 5 stars ]4 of 5 stars5 of 5 stars', '1 of 5 stars[ 2 of 5 stars ]3 of 5 stars4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars[ 3 of 5 stars ]4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars[ 3 of 5 stars ]4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars[ 4 of 5 stars ]5 of 5 stars', '1 of 5 stars2 of 5 stars[ 3 of 5 stars ]4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars[ 3 of 5 stars ]4 of 5 stars5 of 5 stars', '1 of 5 stars2 of 5 stars3 of 5 stars4 of 5 stars5 of 5 stars']
 
+// the below code returns only the rating i gave which is in the square brackets
+const newRatings = myrating.map(ratings => {
+    const newRatingMatch = ratings.match(/\[\s*(\d+)\s*of\s*5\s*stars\s*\]/);
+    if (newRatingMatch) {
+      return parseInt(newRatingMatch[1]);
+    } 
+      return null; 
+    
+  });
+  
+
+console.log(myrating)
 const dateadded = ['Mar 29, 2023', 'Mar 29, 2023', 'Mar 21, 2023', 'Mar 18, 2023', 'Mar 16, 2023', 'Mar 10, 2023', 'Feb 28, 2023', 'Feb 27, 2023', 'Feb 27, 2023', 'Feb 26, 2023', 'Feb 26, 2023', 'Feb 24, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 23, 2023', 'Feb 14, 2023']
 
 // const newArray = title.map((e, i) => `${e  } ${  author[i]}`);
@@ -51,8 +63,8 @@ for (let i = 0; i < title.length; i++) {
     pagesCell.innerHTML = pages[i];
     const avgratingCell = row.insertCell(3);
     avgratingCell.innerHTML = avgrating[i];
-    const myratingCell = row.insertCell(4);
-    myratingCell.innerHTML = myrating[i];
+    const newratingCell = row.insertCell(4);
+    newratingCell.innerHTML = newRatings[i];
     const dateaddedCell = row.insertCell(5);
     dateaddedCell.innerHTML = dateadded[i];
   }

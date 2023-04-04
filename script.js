@@ -1,10 +1,18 @@
-// const myLibrary = [];
-
 const title = ['Gallows Hill', 'Daisy Darker', 'Truly Madly Guilty', "The Housemaid's Secret\n        (The Housemaid, #2)", 'The Guest List', 'Upgrade', 'Aesthetica', 'This Thing Between Us', 'Agency\n        (Jackpot, #2)', 'Version Control', 'We Had to Remove This Post', 'No One Is Talking About This', 'The Verifiers', 'Ripe', 'The Glow', 'The Circle\n        (The Circle, #1)', 'Edit', 'The Noise', 'The Big Dark Sky', 'Confessions', 'The Club', 'Camp Slaughter', 'The Last House on the Street', 'The Woman', 'The Girl Next Door', 'The Handyman', 'Several People Are Typing', 'All the Dangerous Things', 'The Family Game', 'Broadcast']
 
 const author = ['Coates, Darcy\n        *', 'Feeney, Alice\n        *', 'Moriarty, Liane\n        *', 'McFadden, Freida\n        *', 'Foley, Lucy\n        *', 'Crouch, Blake\n        *', 'Rowbottom, Allie\n        *', 'Moreno, Gus\n        *', 'Gibson, William', 'Palmer, Dexter', 'Bervoets, Hanna', 'Lockwood, Patricia\n        *', 'Pek, Jane\n        *', 'Etter, Sarah Rose\n        *', 'Gaynor, Jessie\n        *', 'Eggers, Dave', 'Chesler, Rick\n        *', 'Patterson, James\n        *', 'Koontz, Dean\n        *', 'Minato, Kanae', 'Lloyd, Ellery\n        *', 'Gomez, Sergio\n        *', 'Chamberlain, Diane\n        *', 'Ketchum, Jack', 'Ketchum, Jack', 'Little, Bentley', 'Kasulke, Calvin\n        *', 'Willingham, Stacy\n        *']
 
+// the below code removes the star
+author.forEach((element, i) => {
+    author[i] = element.replace(/[^a-zA-Z,]/g, ' ');
+   });
+
 const pages = ['377\n        pp', '352\n        pp', '517\n        pp', '318\n        pp', '319\n        pp', '352\n        pp', '264\n        pp', '272\n        pp', '413\n        pp', '495\n        pp', '160\n        pp', '210\n        pp', '358\n        pp', '288\n        pp', '320\n        pp', '493\n        pp', '229\n        pp', '432\n        pp', '390\n        pp', '240\n        pp', '320\n        pp', '290\n        pp', '352\n        pp', '336\n        pp', '370\n        pp', '334\n        pp', '256\n        pp', '326\n        pp', '336\n        pp', '288\n        pp']
+
+// the below code removes the letters pp
+pages.forEach((element, i) => {
+    pages[i] = element.replace(/[^0-9 ]/g, ' ');
+   });
 
 const avgrating = ['4.01', '3.81', '3.59', '4.37', '3.84', '3.82', '3.50', '3.77', '3.80', '3.73', '3.01', '3.57', '3.51', '4.21', '3.67', '3.43', '3.70', '3.53', '4.04', '4.05', '3.34', '3.50', '4.25', '3.91', '3.95', '3.70', '3.66', '4.17', '3.91', '3.55']
 
@@ -30,15 +38,8 @@ console.log(bookTable); */
 
 // title.forEach(element => console.table(element))
 
-title.forEach((book1, index) => {
-    const book2 = author[index];
-    console.table(book1, book2)
-});
-
 
 const bookTable = document.getElementById("myBooks")
-
-
 
 for (let i = 0; i < title.length; i++) {
     const row = bookTable.insertRow(i + 1);

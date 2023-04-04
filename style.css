@@ -4,7 +4,20 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-color: rgb(13, 0, 31);
+  --text: #ffe7ff;
+}
+
 html {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.7rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  background-color: var(--background-color);
+  color: var(--text);
+}
+
+#myBooks,th, tr, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  align-items: center;
 }

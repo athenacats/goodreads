@@ -21,23 +21,23 @@ html {
 
 #myBooks,th, tr, td {
   border: 1px solid;
-  border-radius: 2px;
   border-collapse: collapse;
   align-items: center;
 }
 
 form{
+  width: 70%;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   justify-content: center;
-  margin: auto;
   padding: 20px;
   background-color: var(--form-color) ;
+  border-radius: 8px;
 }
 
 input {
-  width: 70%;
   padding: 6px 10px;
   border: 1px solid;
   border-radius: 4px;
@@ -66,9 +66,15 @@ button {
   border: 1px solid var(--text);
   border-radius: 4px;
   cursor: pointer;
+  grid-column: span 2;
+  margin-top: 10px;
+  width: 50%;
+  align-self: center;
+  justify-self: center;
 }
 
 button:hover {
   background-color: var(--hover);
   color: var(--text);
+  
 }

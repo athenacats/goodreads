@@ -21,6 +21,12 @@ html {
   color: var(--text);
 }
 
+h1 {
+  margin: 40px auto;
+  text-align: center;
+  text-decoration: underline;
+}
+
 #myBooks,th, tr, td {
   border-bottom: 1px solid var(--table-lines);
   border-collapse: collapse;

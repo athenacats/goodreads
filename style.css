@@ -31,7 +31,7 @@ html {
 
 form{
   width: 70%;
-  margin: 20px auto;
+  margin: 40px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
@@ -98,7 +98,7 @@ button:hover {
 
 table {
   margin: 20px auto;
-  box-shadow: 0 0 20px var(--hover);
+  box-shadow: 0 0 16px var(--hover);
 }
 
 table thead .header {

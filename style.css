@@ -10,6 +10,8 @@
   --form-text: #0d001f;
   --hover: #5a245f;
   --form-color: rgb(90, 36, 95, 0.7);
+  --alternating-color: #180433;
+  --table-lines: #8f618f;
 }
 
 html {
@@ -20,9 +22,11 @@ html {
 }
 
 #myBooks,th, tr, td {
-  border: 1px solid;
+  border-bottom: 1px solid var(--table-lines);
   border-collapse: collapse;
   align-items: center;
+  padding: 5px;
+  font-size: 0.9rem;
 }
 
 form{
@@ -68,7 +72,7 @@ button {
   cursor: pointer;
   grid-column: span 2;
   margin-top: 10px;
-  width: 50%;
+  width: 40%;
   align-self: center;
   justify-self: center;
 }
@@ -77,4 +81,26 @@ button:hover {
   background-color: var(--hover);
   color: var(--text);
   
+}
+
+table {
+  margin: 20px auto;
+  box-shadow: 0 0 20px var(--hover);
+}
+
+table thead .header {
+  background-color: var(--form-color);
+
+}
+
+table tr:nth-of-type(even) {
+  background-color: var(--alternating-color);
+}
+
+.header th {
+  padding: 20px;
+}
+
+table td {
+  text-align: center;
 }
